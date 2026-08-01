@@ -1,0 +1,15 @@
+svg {
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+[class^="icon"] {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

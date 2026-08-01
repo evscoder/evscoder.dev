@@ -1,0 +1,41 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top right;
+    animation: iosDropdownOut 0.3s cubic-bezier(0.25, 1, 0.5, 1) both;
+
+    &.is-open {
+        pointer-events: auto;
+        animation: iosDropdownIn 0.3s cubic-bezier(0.25, 1, 0.5, 1) both;
+    }
+}
+
+@keyframes iosDropdownIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-16px) scale(0.25);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0) scale(1.16);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes iosDropdownOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.5);
+    }
+}
+

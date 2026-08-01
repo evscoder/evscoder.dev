@@ -1,0 +1,14 @@
+@use '../plugins/mixins' as *;
+
+.simplebar-scrollbar:before {
+    background: var(--primary-color);
+    border-radius: 7px;
+}
+
+.simplebar-track.simplebar-vertical {
+    .simplebar-scrollbar:before {
+        border-radius: 7px;
+        inset: 11px 3px 11px 2px;
+        opacity: 1!important;
+    }
+}

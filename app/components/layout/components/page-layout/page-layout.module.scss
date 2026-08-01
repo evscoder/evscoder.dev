@@ -1,0 +1,12 @@
+.page-wrapper {
+  opacity: 0;
+  transition: opacity 0.6s ease-in 0.3s;
+
+  :global(.load) & {
+    opacity: 1;
+  }
+}
+
+.page-content {
+  display: flex;
+}

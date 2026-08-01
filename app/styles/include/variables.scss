@@ -1,0 +1,107 @@
+@use "../plugins/include-media" as *;
+
+:root {
+    --black: #000000;
+    --gray: #a9a9a9;
+    --gray2: #2D5262;
+    --teal: #3c4e6e;
+    --teal2: #05070b;
+    --white: #ffffff;
+
+    --primary-color: var(--teal);
+    --theme-dark-color: var(--teal2);
+    --page-surface: #f6f8fc;
+    --page-text: #16202c;
+
+    --glass-morphism-bg: rgba(255, 255, 255, 0.55);
+    --glass-morphism-filter: blur(16px);
+    --glass-morphism-border-color: rgba(31, 38, 135, 0.1);
+    --glass-morphism-shadow: 0 8px 12px rgba(31, 38, 135, 0.2);
+    --glass-morphism-color: var(--primary-color);
+
+    --glass-morphism-dark-bg: rgba(30, 30, 46, 0.4);
+    --glass-morphism-dark-filter: blur(16px);
+    --glass-morphism-dark-border-color: rgba(255, 255, 255, 0.1);
+    --glass-morphism-dark-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    --glass-morphism-dark-color: var(--white);
+
+    --t-base: 0.175s ease-in-out;
+
+    --font-size-base: 16px;
+    --font-family-default: 'Source Sans Pro', sans-serif;
+    --font-family-primary: 'Mantserrat', sans-serif;
+    --font-family-text: 'Monocraft', sans-serif;
+    --font-family-text2: 'Iceland', sans-serif;
+
+    --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05), 0px 8px 32px rgba(0, 0, 0, 0.12);
+    --header-height: 54px;
+    --footer-height: 54px;
+
+    --base-container-width: 1240;
+    --container-gutter: 15px;
+    --container-width: calc(var(--base-container-width) * 1px + var(--container-gutter) * 2);
+
+    --hero-title: #0f172a;
+    --hero-text: #13202f;
+    --hero-copy: #3f4c5f;
+    --hero-muted: #5f6f84;
+    --hero-faint: #64748b;
+    --hero-divider: rgba(60, 78, 110, 0.18);
+    --hero-accent: #f97316;
+    --hero-accent-glow: rgba(249, 115, 22, 0.55);
+    --hero-secondary: #0284c7;
+    --hero-success: #059669;
+    --hero-tertiary: #7c3aed;
+    --hero-shadow: rgba(15, 23, 42, 0.12);
+    --hero-panel-bg: rgba(255, 255, 255, 0.7);
+    --hero-panel-border: rgba(148, 163, 184, 0.26);
+    --hero-panel-overlay: radial-gradient(circle at top left, rgba(14, 165, 233, 0.1), transparent 36%), linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.22) 34%);
+    --hero-bg-glow: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.14), transparent 30%), radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.12), transparent 28%), radial-gradient(circle at 50% 80%, rgba(100, 116, 139, 0.14), transparent 34%);
+    --hero-grid-opacity: 0.38;
+    --hero-grid-line: rgba(148, 163, 184, 0.22);
+    --hero-card-bg: rgba(255, 255, 255, 0.52);
+    --hero-card-strong-bg: rgba(244, 247, 251, 0.86);
+    --hero-card-border: rgba(148, 163, 184, 0.3);
+    --hero-photo-bg: #d7e3ef;
+    --hero-photo-overlay: linear-gradient(to top, rgba(246, 248, 252, 0.95), transparent 48%);
+    --hero-status-bg: rgba(255, 255, 255, 0.68);
+    --hero-quote-bg: rgba(249, 115, 22, 0.12);
+    --hero-quote-border: rgba(249, 115, 22, 0.28);
+    --hero-quote-text: #9a3412;
+
+    @media screen and (width < bp('md')) {
+        --container-gutter: 10px;
+    }
+}
+
+.theme-alt {
+    --page-surface: #05070b;
+    --page-text: #f1f5f9;
+    --hero-title: #ffffff;
+    --hero-text: #f1f5f9;
+    --hero-copy: #cbd5e1;
+    --hero-muted: #94a3b8;
+    --hero-faint: #94a3b8;
+    --hero-divider: rgba(51, 65, 85, 1);
+    --hero-accent: #fb923c;
+    --hero-accent-glow: rgba(249, 115, 22, 0.8);
+    --hero-secondary: #7dd3fc;
+    --hero-success: #6ee7b7;
+    --hero-tertiary: #c4b5fd;
+    --hero-shadow: rgba(0, 0, 0, 0.4);
+    --hero-panel-bg: rgba(2, 8, 23, 0.7);
+    --hero-panel-border: rgba(71, 85, 105, 0.4);
+    --hero-panel-overlay: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 36%), linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 34%);
+    --hero-bg-glow: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 30%), radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.14), transparent 28%), radial-gradient(circle at 50% 80%, rgba(100, 116, 139, 0.16), transparent 34%);
+    --hero-grid-opacity: 0.3;
+    --hero-grid-line: rgba(148, 163, 184, 0.13);
+    --hero-card-bg: rgba(0, 0, 0, 0.25);
+    --hero-card-strong-bg: rgba(15, 23, 42, 0.7);
+    --hero-card-border: rgba(71, 85, 105, 0.5);
+    --hero-photo-bg: #0f172a;
+    --hero-photo-overlay: linear-gradient(to top, rgba(5, 7, 11, 0.95), transparent 48%);
+    --hero-status-bg: rgba(0, 0, 0, 0.55);
+    --hero-quote-bg: rgba(249, 115, 22, 0.1);
+    --hero-quote-border: rgba(251, 146, 60, 0.3);
+    --hero-quote-text: #fed7aa;
+}

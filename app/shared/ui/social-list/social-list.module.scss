@@ -1,0 +1,47 @@
+@use "../../../styles/plugins/include-media" as *;
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (width < bp('md')) {
+    gap: 15px;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+    transition: 200ms ease-in-out;
+    text-decoration: none;
+    padding: 4px 16px;
+    border-radius: 24px;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    :global(.theme-alt) & {
+      &:hover {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__link-icon {
+    width: 1.75em;
+    height: 2em;
+  }
+}

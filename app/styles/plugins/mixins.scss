@@ -1,0 +1,47 @@
+@mixin text-overflow() {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin text-ellipsis($rows: 1) {
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $rows;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin text-gradient($color, $bg) {
+    color: $color;
+    background: $bg;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+@mixin scrollbar-invisible {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin glassMorphism($type: 'light') {
+    @if $type == 'dark' {
+        background: var(--glass-morphism-dark-bg);
+        backdrop-filter: var(--glass-morphism-dark-filter);
+        border: 1px solid var(--glass-morphism-dark-border-color);
+        box-shadow: var(--glass-morphism-dark-shadow);
+        color: var(--glass-morphism-dark-color);
+    } @else if $type == 'light' {
+        background: var(--glass-morphism-bg);
+        backdrop-filter: var(--glass-morphism-filter);
+        border: 1px solid var(--glass-morphism-border-color);
+        box-shadow: var(--glass-morphism-shadow);
+        color: var(--glass-morphism-color);
+    }
+}
