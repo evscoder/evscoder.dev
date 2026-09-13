@@ -15,7 +15,12 @@ export function SiteFooter() {
       <div className="container">
         <div className={s["footer__card"]}>
           <div className={s["footer__top"]}>
-            <div className={s["footer__brand"]}><Braces aria-hidden="true" /><span>EVS.CODER</span></div>
+            <div className={s["footer__brand"]}>
+              <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-2xl bg-[#b6ff5c] text-slate-950 shadow-[0_0_36px_rgba(182,255,92,.32)]">
+                <Braces className="h-5 w-5" />
+              <span className="absolute inset-x-0 bottom-0 h-px bg-white/70" />
+            </span>
+              <span>EVS.CODER</span></div>
           </div>
 
           <div className={s["footer__row"]}>

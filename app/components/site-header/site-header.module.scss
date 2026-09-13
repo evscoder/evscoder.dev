@@ -43,8 +43,8 @@
 
     @media screen and (width < bp('md')) {
       gap: 8px;
-      padding: 8px;
-      border-radius: 22px;
+      border-radius: 0;
+      padding: 6px var(--container-gutter);
       flex-wrap: nowrap;
       justify-content: space-between;
     }

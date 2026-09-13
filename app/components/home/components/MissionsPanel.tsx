@@ -31,7 +31,7 @@ export function MissionsPanel({ content }: SectionProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.12 * index }}
               className={cn(
-                "flex gap-3 rounded-xl border p-4",
+                "flex gap-3 rounded-xl border p-4 max-md:px-0",
                 isThemeAlt
                   ? "border-slate-700/60 bg-black/25 text-slate-300"
                   : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)] text-[var(--hero-copy)]",

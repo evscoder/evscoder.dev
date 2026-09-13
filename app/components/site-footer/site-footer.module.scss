@@ -7,17 +7,24 @@
   padding: 0 0 24px;
 
   &__card {
-    overflow: hidden;
-    padding: 28px;
-    border-radius: 32px;
+    @media screen and (width < bp('md')) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
   }
 
-  &__row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  &__row { display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    @media screen and (width < bp('md')) {
+      display: contents;
+    }
+  }
 
   &__brand {
     display: flex; align-items: center; gap: 10px;
     font-size: 13px; font-weight: 900; letter-spacing: .08em;
-    svg { width: 18px; color: #b6ff5c; }
+    svg { width: 18px; }
   }
 
   &__status {
@@ -34,7 +41,13 @@
     svg { width: 24px; }
   }
 
-  &__copyright { margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+  &__copyright { margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: .12em;
+    @media screen and (width < bp('md')) {
+      grid-column: 1 / -1;
+      order: 1;
+      text-align: center;
+    }
+  }
   &__socials { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
 
   &__social-link {
@@ -46,7 +59,6 @@
   }
 
   @media screen and (width < bp('md')) {
-    &__card { padding: 20px; border-radius: 24px; }
     &__cta { align-items: center; padding: 36px 0; }
     &__cta a { width: 52px; height: 52px; }
     &__row { align-items: flex-start; flex-direction: column-reverse; }

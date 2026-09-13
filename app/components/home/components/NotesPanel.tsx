@@ -37,7 +37,7 @@ export function NotesPanel({ content }: SectionProps) {
             <article
               key={note.title}
               className={cn(
-                "group rounded-2xl border p-5 transition",
+                "group rounded-2xl border p-5 max-md:px-0 transition",
                 isThemeAlt
                   ? "border-slate-700/60 bg-black/25 hover:border-slate-500/70"
                   : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)] hover:border-slate-300/90",

@@ -58,7 +58,7 @@ export function OverviewPanel({ content }: SectionProps) {
 
           <div
             className={cn(
-              "rounded-2xl border p-4 sm:p-5",
+              "rounded-2xl border p-4 max-md:px-0 sm:p-5",
               isThemeAlt
                 ? "border-slate-700/70 bg-black/20"
                 : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",
@@ -94,7 +94,7 @@ export function OverviewPanel({ content }: SectionProps) {
               <div
                 key={item.label}
                 className={cn(
-                  "rounded-xl border p-4",
+                  "rounded-xl border p-4 max-md:px-0",
                   isThemeAlt
                     ? "border-slate-700/70 bg-black/30"
                     : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",
@@ -124,7 +124,7 @@ export function OverviewPanel({ content }: SectionProps) {
         <div className="grid gap-4">
           <div
             className={cn(
-              "relative overflow-hidden rounded-2xl border p-5 sm:p-6",
+              "relative overflow-hidden rounded-2xl border p-5 max-md:px-0 sm:p-6",
               isThemeAlt
                 ? "border-slate-600/50 bg-slate-950/70"
                 : "border-[var(--hero-panel-border)] bg-[var(--hero-card-strong-bg)]",
@@ -174,7 +174,7 @@ export function OverviewPanel({ content }: SectionProps) {
 
           <div
             className={cn(
-              "rounded-2xl border p-5 sm:p-6",
+              "rounded-2xl border p-5 max-md:px-0 sm:p-6",
               isThemeAlt
                 ? "border-slate-700/70 bg-black/25"
                 : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",

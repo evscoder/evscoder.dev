@@ -86,7 +86,7 @@ export const copy = {
     intro:
         "Проектирую frontend-системы, которые выдерживают рост продукта: от архитектуры и SSR/SSG-стратегии до сложных интерфейсов, производительности и UX, готового к реальной продакшен-нагрузке.",
     statusLabel: "Статус",
-    statusValue: "Активен / Готов к продакшену",
+    statusValue: "Системы работают в продакшене",
     capabilityTitle: "Ключевые направления",
     capabilities: [
       "SSR / SSG Systems",
@@ -253,7 +253,7 @@ export const copy = {
     intro:
         "I design frontend systems built to survive product scale: architecture, SSR/SSG strategy, complex interfaces, performance and UX that holds up under real production pressure.",
     statusLabel: "Status",
-    statusValue: "Active / Production Ready",
+    statusValue: "Systems Running in Production",
     capabilityTitle: "Key Directions",
     capabilities: [
       "SSR / SSG Systems",

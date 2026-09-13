@@ -31,7 +31,7 @@ export function PerformancePanel({ content }: SectionProps) {
               <div
                 key={metric.label}
                 className={cn(
-                  "group relative overflow-hidden rounded-2xl border p-5",
+                  "group relative overflow-hidden rounded-2xl border p-5 max-md:px-0",
                   isThemeAlt
                     ? "border-slate-700/60 bg-black/25"
                     : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",

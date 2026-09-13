@@ -42,7 +42,7 @@ export function ProofPanel({ content }: SectionProps) {
               <div
                 key={proof.title}
                 className={cn(
-                  "rounded-2xl border p-5",
+                  "rounded-2xl border p-5 max-md:px-0",
                   isThemeAlt
                     ? "border-slate-700/60 bg-black/25"
                     : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",
