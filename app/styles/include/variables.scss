@@ -10,7 +10,7 @@
 
     --primary-color: var(--teal);
     --theme-dark-color: var(--teal2);
-    --page-surface: #f6f8fc;
+    --page-surface: #edf2f7;
     --page-text: #16202c;
 
     --glass-morphism-bg: rgba(255, 255, 255, 0.55);
@@ -37,7 +37,7 @@
     --header-height: 54px;
     --footer-height: 54px;
 
-    --base-container-width: 1240;
+    --base-container-width: 1380;
     --container-gutter: 15px;
     --container-width: calc(var(--base-container-width) * 1px + var(--container-gutter) * 2);
 
@@ -51,16 +51,17 @@
     --hero-accent-glow: rgba(249, 115, 22, 0.55);
     --hero-secondary: #0284c7;
     --hero-success: #059669;
+    --hero-success-soft: rgba(5, 150, 105, 0.1);
     --hero-tertiary: #7c3aed;
     --hero-shadow: rgba(15, 23, 42, 0.12);
-    --hero-panel-bg: rgba(255, 255, 255, 0.7);
+    --hero-panel-bg: rgba(255, 255, 255, 0.78);
     --hero-panel-border: rgba(148, 163, 184, 0.26);
     --hero-panel-overlay: radial-gradient(circle at top left, rgba(14, 165, 233, 0.1), transparent 36%), linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.22) 34%);
     --hero-bg-glow: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.14), transparent 30%), radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.12), transparent 28%), radial-gradient(circle at 50% 80%, rgba(100, 116, 139, 0.14), transparent 34%);
     --hero-grid-opacity: 0.38;
     --hero-grid-line: rgba(148, 163, 184, 0.22);
-    --hero-card-bg: rgba(255, 255, 255, 0.52);
-    --hero-card-strong-bg: rgba(244, 247, 251, 0.86);
+    --hero-card-bg: rgba(248, 251, 255, 0.72);
+    --hero-card-strong-bg: rgba(255, 255, 255, 0.92);
     --hero-card-border: rgba(148, 163, 184, 0.3);
     --hero-photo-bg: #d7e3ef;
     --hero-photo-overlay: linear-gradient(to top, rgba(246, 248, 252, 0.95), transparent 48%);
@@ -75,28 +76,29 @@
 }
 
 .theme-alt {
-    --page-surface: #05070b;
+    --page-surface: #05070c;
     --page-text: #f1f5f9;
     --hero-title: #ffffff;
     --hero-text: #f1f5f9;
     --hero-copy: #cbd5e1;
-    --hero-muted: #94a3b8;
-    --hero-faint: #94a3b8;
+    --hero-muted: #c4cedb;
+    --hero-faint: #aebaca;
     --hero-divider: rgba(51, 65, 85, 1);
     --hero-accent: #fb923c;
     --hero-accent-glow: rgba(249, 115, 22, 0.8);
     --hero-secondary: #7dd3fc;
     --hero-success: #6ee7b7;
+    --hero-success-soft: rgba(110, 231, 183, 0.1);
     --hero-tertiary: #c4b5fd;
     --hero-shadow: rgba(0, 0, 0, 0.4);
-    --hero-panel-bg: rgba(2, 8, 23, 0.7);
+    --hero-panel-bg: rgba(7, 12, 21, 0.82);
     --hero-panel-border: rgba(71, 85, 105, 0.4);
     --hero-panel-overlay: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 36%), linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 34%);
     --hero-bg-glow: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 30%), radial-gradient(circle at 80% 10%, rgba(249, 115, 22, 0.14), transparent 28%), radial-gradient(circle at 50% 80%, rgba(100, 116, 139, 0.16), transparent 34%);
     --hero-grid-opacity: 0.3;
     --hero-grid-line: rgba(148, 163, 184, 0.13);
-    --hero-card-bg: rgba(0, 0, 0, 0.25);
-    --hero-card-strong-bg: rgba(15, 23, 42, 0.7);
+    --hero-card-bg: rgba(10, 16, 27, 0.76);
+    --hero-card-strong-bg: rgba(16, 24, 39, 0.9);
     --hero-card-border: rgba(71, 85, 105, 0.5);
     --hero-photo-bg: #0f172a;
     --hero-photo-overlay: linear-gradient(to top, rgba(5, 7, 11, 0.95), transparent 48%);

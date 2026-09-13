@@ -26,22 +26,23 @@ function HomeComponent() {
 
   return (
     <section
+      id="top"
       className={cn(
-        "min-h-screen grow pt-24 sm:pt-28",
+        "portfolio-shell min-h-screen grow overflow-hidden pb-10",
         isThemeAlt
           ? "bg-[#05070b] text-slate-100"
           : "bg-[var(--page-surface)] text-[var(--hero-text)]",
       )}
     >
+      <Background />
+      <HeroSection />
       <div className="container">
-        <Background />
-        <HeroSection />
-
         <motion.section
+          id="expertise"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
-          className="relative mx-auto grid gap-4 lg:grid-cols-[1.1fr_.9fr]"
+          className="portfolio-sections relative mx-auto grid scroll-mt-28 gap-6 lg:grid-cols-2"
         >
           <OverviewPanel content={content} />
           <MissionsPanel content={content} />
