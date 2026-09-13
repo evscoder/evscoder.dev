@@ -41,7 +41,7 @@ export function SiteHeader() {
         isFixed && s["is-fixed"],
       )}
     >
-      <div className={cn(s["page-header__container"], "container max-md:px-0!")}>
+      <div className={cn(s["page-header__container"], "container px-0!")}>
         <div className={s["page-header__row"]}>
           <div className={s["page-header__left"]}>
             <div className={s["page-header__nav"]}>
