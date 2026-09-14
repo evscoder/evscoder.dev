@@ -1,9 +1,12 @@
 import cn from "clsx";
 import { NotebookPen } from "lucide-react";
+import type { CSSProperties } from "react";
 
 import { Panel } from "@/app/components/panel/Panel";
 import type { SectionProps } from "@/app/components/home/model/section-types";
 import { useSiteContext } from "@/app/components/layout/site-provider";
+
+const noteLabelColors = ["#a78bfa", "#61b3f2", "#53e2bd", "#b6ff5c"];
 
 export function NotesPanel({ content }: SectionProps) {
   const { isThemeAlt } = useSiteContext();
@@ -33,9 +36,12 @@ export function NotesPanel({ content }: SectionProps) {
         </p>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {content.notes.map((note) => (
+          {content.notes.map((note, index) => (
             <article
               key={note.title}
+              style={
+                { "--note-label-color": noteLabelColors[index] } as CSSProperties
+              }
               className={cn(
                 "group rounded-2xl border p-5 max-md:px-0 transition",
                 isThemeAlt
@@ -46,10 +52,10 @@ export function NotesPanel({ content }: SectionProps) {
               <div className="flex items-center justify-between gap-3">
                 <span
                   className={cn(
-                    "rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em]",
+                    "rounded-full bg-[color-mix(in_srgb,var(--note-label-color)_14%,transparent)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--note-label-color)]",
                     isThemeAlt
-                      ? "bg-slate-900 text-slate-300"
-                      : "bg-[var(--hero-card-strong-bg)] text-[var(--hero-faint)]",
+                      ? "ring-1 ring-[color-mix(in_srgb,var(--note-label-color)_18%,transparent)]"
+                      : "ring-1 ring-[color-mix(in_srgb,var(--note-label-color)_24%,transparent)]",
                   )}
                 >
                   {note.tag}

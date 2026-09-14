@@ -1,9 +1,12 @@
 import cn from "clsx";
 import { Gauge } from "lucide-react";
+import type { CSSProperties } from "react";
 
 import { Panel } from "@/app/components/panel/Panel";
 import type { SectionProps } from "@/app/components/home/model/section-types";
 import { useSiteContext } from "@/app/components/layout/site-provider";
+
+const metricColors = ["#b6ff5c", "#85f08d", "#53e2bd", "#22d3ee"];
 
 export function PerformancePanel({ content }: SectionProps) {
   const { isThemeAlt } = useSiteContext();
@@ -24,12 +27,15 @@ export function PerformancePanel({ content }: SectionProps) {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {content.performance.map((metric) => {
+          {content.performance.map((metric, index) => {
             const Icon = metric.icon;
 
             return (
               <div
                 key={metric.label}
+                style={
+                  { "--metric-color": metricColors[index] } as CSSProperties
+                }
                 className={cn(
                   "group relative overflow-hidden rounded-2xl border p-5 max-md:px-0",
                   isThemeAlt
@@ -39,10 +45,10 @@ export function PerformancePanel({ content }: SectionProps) {
               >
                 <div
                   className={cn(
-                    "mb-5 flex h-11 w-11 items-center justify-center rounded-xl",
+                    "mb-5 flex h-11 w-11 items-center justify-center rounded-xl text-[var(--metric-color)]",
                     isThemeAlt
-                      ? "bg-emerald-400/10 text-emerald-300"
-                      : "bg-[var(--hero-success-soft)] text-[var(--hero-success)]",
+                      ? "bg-[color-mix(in_srgb,var(--metric-color)_12%,transparent)]"
+                      : "bg-[color-mix(in_srgb,var(--metric-color)_16%,transparent)]",
                   )}
                 >
                   <Icon className="h-5 w-5" />
@@ -68,15 +74,12 @@ export function PerformancePanel({ content }: SectionProps) {
 
                 <div
                   className={cn(
-                    "mt-5 h-1.5 overflow-hidden rounded-full",
+                    "mt-5 h-2.5 overflow-hidden rounded-full",
                     isThemeAlt ? "bg-slate-800" : "bg-[var(--hero-divider)]",
                   )}
                 >
                   <div
-                    className={cn(
-                      "h-full rounded-full",
-                      isThemeAlt ? "bg-emerald-400" : "bg-[var(--hero-success)]",
-                    )}
+                    className="h-full rounded-full bg-[var(--metric-color)]"
                     style={{ width: metric.value === "95+" ? "95%" : "100%" }}
                   />
                 </div>
