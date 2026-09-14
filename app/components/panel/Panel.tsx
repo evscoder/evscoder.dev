@@ -13,7 +13,7 @@ export function Panel({ children, className = "" }: PanelProps) {
     return (
         <div
             className={cn(
-                "portfolio-panel relative overflow-hidden rounded-[32px]",
+                "portfolio-panel relative rounded-[32px]",
                 isThemeAlt ? "text-slate-100" : "text-[var(--hero-text)]",
                 className,
             )}

@@ -28,7 +28,7 @@ function HomeComponent() {
     <section
       id="top"
       className={cn(
-        "portfolio-shell min-h-screen grow overflow-hidden pb-10",
+        "portfolio-shell min-h-screen grow pb-10",
         isThemeAlt
           ? "bg-[#05070b] text-slate-100"
           : "bg-[var(--page-surface)] text-[var(--hero-text)]",

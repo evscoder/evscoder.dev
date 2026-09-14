@@ -16,7 +16,7 @@ export function HeroSection() {
   const { isThemeAlt, language } = useSiteContext();
 
   return (
-    <section className={cn(" pt-24 sm:pt-28 hero-stage relative mb-6 min-h-[calc(100svh-112px)] rounded-[28px]  sm:rounded-[40px]", isThemeAlt ? "bg-[#080b12] text-white" : "shadow-[0_40px_120px_rgba(42,58,89,.16)]")}>
+    <section className={cn("overflow-hidden pt-24 sm:pt-28 hero-stage relative mb-6 min-h-[calc(100svh-112px)]", isThemeAlt ? "bg-[#080b12] text-white" : "shadow-[0_40px_120px_rgba(42,58,89,.16)]")}>
       <div className="hero-noise pointer-events-none absolute inset-0 opacity-40" />
       <div className="pointer-events-none absolute -left-40 -top-52 h-[540px] w-[540px] rounded-full bg-cyan-400/20 blur-[120px]" />
       <div className="pointer-events-none absolute -right-48 top-16 h-[520px] w-[520px] rounded-full bg-violet-500/20 blur-[130px]" />
@@ -73,8 +73,13 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        <footer className={cn("grid gap-3 border-t pt-5 sm:grid-cols-3 max-sm:justify-center", isThemeAlt ? "border-white/10" : "border-slate-200")}>
-          {metrics.map((metric, index) => <div key={metric.value} className={cn("flex items-baseline gap-3 sm:px-5 max-sm:grid max-sm:grid-cols-[calc(4ch+1em)_1fr]", index > 0 && (isThemeAlt ? "sm:border-l sm:border-white/10" : "sm:border-l sm:border-slate-200"))}><span className="text-2xl font-black tracking-tight max-sm:text-right">{metric.value}</span><span className={cn("text-[9px] uppercase tracking-[.2em]", isThemeAlt ? "text-white/40" : "text-slate-500")}>{metric[language]}</span></div>)}
+        <footer className={cn("grid grid-cols-3 gap-0 border-t pt-5 max-sm:pb-1 sm:gap-3", isThemeAlt ? "border-white/10" : "border-slate-200")}>
+          {metrics.map((metric, index) => (
+            <div key={metric.value} className={cn("flex min-w-0 flex-col items-center gap-2 px-1 text-center sm:flex-row sm:items-baseline sm:gap-3 sm:px-5 sm:text-left", index > 0 && (isThemeAlt ? "border-l border-white/10" : "border-l border-slate-200"))}>
+              <span className="text-[28px] font-black leading-none tracking-tight sm:text-2xl">{metric.value}</span>
+              <span className={cn("text-[8px] leading-4 uppercase tracking-[.06em] sm:text-[9px] sm:tracking-[.2em]", isThemeAlt ? "text-white/40" : "text-slate-500")}>{metric[language]}</span>
+            </div>
+          ))}
         </footer>
       </div>
     </section>

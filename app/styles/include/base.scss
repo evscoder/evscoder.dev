@@ -231,7 +231,11 @@ html:not(.theme-alt) .portfolio-panel {
 .portfolio-sections > .portfolio-panel {
     counter-increment: portfolio-section;
     border: 0;
-    background: #0c111b;
+    background-color: #0c111b;
+    background-image: linear-gradient(90deg, #b6ff5c, #22d3ee);
+    background-size: 100% 5px;
+    background-position: top;
+    background-repeat: no-repeat;
     box-shadow: none;
     backdrop-filter: none;
     transition: transform .45s cubic-bezier(.16, 1, .3, 1);
@@ -240,24 +244,15 @@ html:not(.theme-alt) .portfolio-panel {
         transform: translateY(-4px);
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto;
-        z-index: 2;
-        height: 5px;
-        background: #b6ff5c;
-    }
-
     &::after {
         display: none;
     }
 
-    &:nth-of-type(3n + 2)::before { background: #22d3ee; }
-    &:nth-of-type(3n + 3)::before { background: #a78bfa; }
+    &:nth-of-type(3n + 2) { background-image: linear-gradient(90deg, #22d3ee, #a78bfa); }
+    &:nth-of-type(3n + 3) { background-image: linear-gradient(90deg, #a78bfa, #22d3ee, #b6ff5c); }
 
-    &:nth-of-type(4n + 2) { background: #101827; }
-    &:nth-of-type(4n + 3) { background: #111421; }
+    &:nth-of-type(4n + 2) { background-color: #101827; }
+    &:nth-of-type(4n + 3) { background-color: #111421; }
 
     .portfolio-panel__index {
         position: absolute;
@@ -301,11 +296,11 @@ html:not(.theme-alt) .portfolio-panel {
 }
 
 html:not(.theme-alt) .portfolio-sections > .portfolio-panel {
-    background: #ffffff;
+    background-color: #ffffff;
     box-shadow: 0 20px 55px rgba(55, 65, 81, .08);
 
-    &:nth-of-type(4n + 2) { background: #e6f8fb; }
-    &:nth-of-type(4n + 3) { background: #f0ecff; }
+    &:nth-of-type(4n + 2) { background-color: #e6f8fb; }
+    &:nth-of-type(4n + 3) { background-color: #f0ecff; }
 
     .portfolio-panel__index {
         color: rgba(15, 23, 42, .035);

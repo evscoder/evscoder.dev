@@ -37,7 +37,7 @@ export function ArchitecturePanel({ content }: SectionProps) {
               <div
                 key={node.id}
                 className={cn(
-                  "relative overflow-hidden rounded-2xl border p-4 max-md:px-0 sm:p-5",
+                  "relative overflow-hidden rounded-2xl border p-4 max-md:pr-0 sm:p-5",
                   isThemeAlt
                     ? "border-slate-700/60 bg-black/25"
                     : "border-[var(--hero-card-border)] bg-[var(--hero-card-bg)]",
@@ -108,7 +108,7 @@ export function ArchitecturePanel({ content }: SectionProps) {
 
         <div
           className={cn(
-            "rounded-2xl p-5 sm:p-6"
+            "rounded-2xl p-5 max-md:px-0 sm:p-6"
           )}
         >
           <div

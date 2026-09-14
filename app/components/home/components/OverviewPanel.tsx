@@ -160,7 +160,7 @@ export function OverviewPanel({ content }: SectionProps) {
                 </div>
                 <div
                   className={cn(
-                    "flex h-12 w-12 items-center justify-center rounded-2xl",
+                    "flex h-12 w-12 items-center justify-center max-sm:mr-3 rounded-2xl",
                     isThemeAlt
                       ? "bg-orange-500/12 text-orange-400"
                       : "bg-[var(--hero-status-bg)] text-[var(--hero-accent)]",
