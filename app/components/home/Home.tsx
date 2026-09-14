@@ -36,7 +36,7 @@ function HomeComponent() {
     >
       <Background />
       <HeroSection />
-      <div className="container">
+      <div className="container max-md:px-0!">
         <motion.section
           id="expertise"
           initial={{ opacity: 0, y: 24 }}

@@ -16,7 +16,7 @@ export function HeroSection() {
   const { isThemeAlt, language } = useSiteContext();
 
   return (
-    <section className={cn("overflow-hidden pt-24 sm:pt-28 hero-stage relative mb-6 min-h-[calc(100svh-112px)]", isThemeAlt ? "bg-[#080b12] text-white" : "shadow-[0_40px_120px_rgba(42,58,89,.16)]")}>
+    <section className={cn("overflow-hidden pt-24 sm:pt-28 hero-stage relative -mb-6 pb-6 min-h-[calc(100svh-112px)]", isThemeAlt ? "bg-[#080b12] text-white" : "shadow-[0_40px_120px_rgba(42,58,89,.16)]")}>
       <div className="hero-noise pointer-events-none absolute inset-0 opacity-40" />
       <div className="pointer-events-none absolute -left-40 -top-52 h-[540px] w-[540px] rounded-full bg-cyan-400/20 blur-[120px]" />
       <div className="pointer-events-none absolute -right-48 top-16 h-[520px] w-[520px] rounded-full bg-violet-500/20 blur-[130px]" />
