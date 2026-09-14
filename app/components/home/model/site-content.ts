@@ -104,6 +104,9 @@ export const copy = {
     ],
     missionTitle: "Что я строю",
     stackTitle: "Основной стек",
+    stackCoreLabel: "Frontend core",
+    stackExpertiseLabel: "Frontend-экспертиза",
+    stackSupportLabel: "Production context",
     quote:
         "Лучший интерфейс тот, который пользователь понимает раньше, чем начинает о нем думать.",
     stats: [
@@ -271,6 +274,9 @@ export const copy = {
     ],
     missionTitle: "What I Build",
     stackTitle: "Core Stack",
+    stackCoreLabel: "Frontend core",
+    stackExpertiseLabel: "Frontend expertise",
+    stackSupportLabel: "Production context",
     quote:
         "The best interface is the one the user understands before thinking.",
     stats: [
@@ -438,17 +444,38 @@ export const highlightVisuals = [
   },
 ] as const;
 
-export const skills = [
-  "Angular / SSR / SSG",
-  "TypeScript",
-  "React",
-  "RxJS",
-  "Nx",
-  "Webpack",
-  "TailwindCSS",
-  "Symfony / Twig",
-  "Docker",
-  "Performance",
-  "SEO / JSON-LD",
+export const stackCore = [
+  {
+    title: "Angular Platform",
+    detail: "SPA · SSR / SSG · RxJS · Nx",
+  },
+  {
+    title: "React Ecosystem",
+    detail: "SPA · Next.js · SSR / RSC · App architecture",
+  },
+  {
+    title: "TypeScript",
+    detail: "Typed application architecture",
+  },
+] as const;
+
+export const stackExpertise = [
   "Complex UI",
-];
+  "Architecture",
+  "Microfrontends",
+  "Monorepo",
+  "Performance",
+  "Design Systems",
+  "State Management",
+  "Rendering Strategy",
+  "API Integration",
+  "Testing & Quality",
+  "SEO / JSON-LD",
+] as const;
+
+export const stackSupport = [
+  "CI / CD",
+  "Docker",
+  "SQL / Databases",
+  "Build Tooling & Bundling",
+] as const;
