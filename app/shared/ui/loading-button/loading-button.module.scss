@@ -1,0 +1,119 @@
+.button {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  min-height: 52px;
+  padding: 14px 28px;
+  border: 1px solid var(--article-button-border);
+  border-radius: 14px;
+  background: var(--article-button-bg);
+  color: var(--article-button-text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--article-button-hover-bg);
+  box-shadow: var(--article-button-shadow);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--hero-secondary);
+  outline-offset: 4px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.button[aria-busy='true'] {
+  cursor: wait;
+}
+
+.content {
+  display: inline-flex;
+  grid-area: 1 / 1;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.spinner {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-top-color: currentColor;
+  border-radius: 50%;
+}
+
+.button[aria-busy='true'] .spinner {
+  animation: spin 750ms linear infinite;
+}
+
+.dots {
+  display: inline-flex;
+  width: 1.2em;
+  text-align: left;
+}
+
+.dots span {
+  opacity: 0;
+}
+
+.button[aria-busy='true'] .dots span {
+  animation: appear 1500ms step-end infinite;
+}
+
+.button[aria-busy='true'] .dots span:nth-child(2) {
+  animation-delay: 250ms;
+}
+
+.button[aria-busy='true'] .dots span:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .button[aria-busy='true'] .spinner,
+  .button[aria-busy='true'] .dots span {
+    animation: none;
+  }
+
+  .dots span {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,49 @@
+.sidebar {
+  min-width: 0;
+  align-self: stretch;
+}
+
+.contents {
+  display: grid;
+  gap: 14px;
+}
+
+.contents > span {
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: var(--hero-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.contents a {
+  padding: 10px 12px;
+  border-left: 2px solid transparent;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 44px;
+}
+
+.contents a span {
+  color: var(--hero-secondary);
+  font-size: 10px;
+}
+
+.contents a:hover {
+  color: var(--hero-secondary);
+}
+
+.contents a[aria-current='location'] {
+  border-left-color: var(--hero-secondary);
+  background: color-mix(in srgb, var(--hero-secondary) 10%, transparent);
+  color: var(--hero-secondary);
+}
+
+.contents a:focus-visible {
+  outline: 2px solid var(--hero-secondary);
+  outline-offset: 3px;
+}

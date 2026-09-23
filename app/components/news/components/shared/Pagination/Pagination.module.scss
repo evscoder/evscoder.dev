@@ -1,0 +1,97 @@
+.paginationFooter {
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.paginationSummary {
+  display: grid;
+  gap: 6px;
+  color: var(--hero-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  justify-self: end;
+}
+
+.paginationSummary span:first-child {
+  color: var(--hero-copy);
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid var(--hero-card-border);
+  border-radius: 16px;
+  background: var(--hero-card-bg);
+  justify-self: center;
+  grid-column: 2;
+}
+
+.pageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--hero-copy);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pageButton:hover:not(:disabled) {
+  border-color: var(--article-button-border);
+  background: var(--article-button-hover-bg);
+  color: var(--article-button-text);
+}
+
+.pageButton[aria-current='page'],
+.pageButton[aria-current='page']:hover {
+  border-color: var(--article-button-border);
+  background: var(--article-page-active-bg);
+  color: var(--article-page-active-text);
+  box-shadow: var(--article-button-shadow);
+}
+
+.pageButton:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.pageButton:focus-visible {
+  outline: 2px solid var(--hero-secondary);
+  outline-offset: 3px;
+}
+
+.pageGap {
+  padding: 0 4px;
+  color: var(--hero-muted);
+}
+
+@media (max-width: 767px) {
+  .paginationFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paginationSummary {
+    order: -1;
+  }
+
+  .pagination {
+    justify-content: center;
+    gap: 4px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "language": {
+    "ru": {
+      "welcome": "Привет!",
+      "name": "Евгений",
+      "family": "Староверов",
+      "developer": "Фронтенд разработчик",
+      "intro": {
+        "welcome": "Я Евгений"
+      },
+      "about": {
+        "social1": "Как со мной связаться?",
+        "social2": "Я в социальных сетях"
+      }
+    },
+    "en": {
+      "welcome": "Hi There!",
+      "name": "Evgeny",
+      "family": "Staroverov",
+      "developer": "Frontend Developer",
+      "intro": {
+        "welcome": "I'am Evgeny"
+      },
+      "about": {
+        "social1": "How to contact me?",
+        "social2": "I'm on social networks"
+      }
+    }
+  }
+}
