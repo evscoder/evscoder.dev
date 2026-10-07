@@ -1,0 +1,44 @@
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.separator {
+  color: var(--hero-muted);
+}
+
+.link {
+  color: var(--hero-secondary);
+  overflow-wrap: anywhere;
+  text-underline-offset: 4px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.label {
+  color: var(--hero-copy);
+  overflow-wrap: anywhere;
+}

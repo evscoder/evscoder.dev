@@ -1,0 +1,37 @@
+.switcher-theme {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--hero-card-strong-bg);
+  color: var(--hero-title);
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+
+  &:hover {
+    color: var(--hero-secondary);
+    border-color: var(--hero-secondary);
+    background: var(--hero-card-bg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--hero-secondary);
+    outline-offset: 4px;
+  }
+
+  &[aria-pressed='true'] {
+    color: #92400e;
+    border-color: #d97706;
+    background: #fef3c7;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

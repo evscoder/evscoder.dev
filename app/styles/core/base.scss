@@ -1,0 +1,52 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  margin: 0;
+  font-feature-settings: normal;
+  font-variant: normal;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  font-family: var(--font-family-default);
+  color: var(--page-text);
+  background-color: var(--page-surface);
+  transition:
+    color 200ms ease-in-out,
+    background-color 200ms ease-in-out;
+
+  &:not(.load) {
+    pointer-events: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: #081018;
+  background: #b6ff5c;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
