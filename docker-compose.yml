@@ -1,0 +1,21 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: development
+    command: npm run dev -- --hostname 0.0.0.0
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+    init: true
+    ports:
+      - "${DEV_PORT:-3000}:3000"
+    volumes:
+      - .:/app
+      - frontend-next:/app/.next
+      - frontend-node-modules:/app/node_modules
+
+volumes:
+  frontend-next:
+  frontend-node-modules:

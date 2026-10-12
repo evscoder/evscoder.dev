@@ -1,0 +1,42 @@
+.progress {
+  display: none;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 101;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--hero-secondary) 0%,
+    var(--hero-tertiary) 50%,
+    var(--hero-accent) 100%
+  );
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+:global(.theme-alt) .progress {
+  height: 4px;
+  background: linear-gradient(90deg, #22d3ee 0%, #e879f9 50%, #fbbf24 100%);
+  box-shadow:
+    0 0 8px rgba(34, 211, 238, 0.65),
+    0 0 16px rgba(232, 121, 249, 0.4);
+}
+
+@supports (animation-timeline: scroll(root block)) {
+  .progress {
+    display: block;
+    animation: fill-progress auto linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes fill-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}

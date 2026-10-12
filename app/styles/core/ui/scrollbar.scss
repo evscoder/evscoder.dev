@@ -1,0 +1,5 @@
+@use '../../plugins/mixins' as *;
+
+.invisible-scroll {
+  @include scrollbar-invisible;
+}
